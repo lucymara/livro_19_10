@@ -23,6 +23,6 @@
                 </c:forEach>
         </table>
 
-        <h1>Lista de livros!!! Isaque Katahira</h1>
+        <h1>Lista de livros!!! Lucymara Carla</h1>
     </body>
 </html>

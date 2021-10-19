@@ -20,5 +20,8 @@ public class LivroController {
   public String listar(){
     return "livro/list.jsp";
   }
-
+  @RequestMapping("/insert")
+  public String formInsert(){
+    return "insert.jsp";
+  }
 }
