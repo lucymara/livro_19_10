@@ -12,7 +12,7 @@
     <body>        
         <main class="container">        
             <h1>livros</h1>        
-            <a href="/livro/insert"  class="btn btn-primary">Novo livro</a>        
+            <button onclick="location.href='/livro/insert'" type="button" class="btn btn-primary">Novo Livro</button>        
             <table>            
                 <tr>                
                     <th>ID</th>                
@@ -21,7 +21,11 @@
                 <c:forEach var="l" items="${livros}">                
                     <tr>                    
                         <td>${l.id}</td>                    
-                        <td>${l.titulo}</td>                
+                        <td>${l.titulo}</td>
+                        <td>
+                            <a href="/livro/update/${l.id}" class="btn btn-primary">Atualizar livro</a>
+                        </td>
+                        <td> <a href="/livro/update/${l.id}" class="btn btn-primary">Delete livro</a></td>                
                     </tr>            
                 </c:forEach>        
             </table>
