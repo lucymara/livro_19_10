@@ -25,7 +25,7 @@
                         <td>
                             <a href="/livro/update/${l.id}" class="btn btn-primary">Atualizar livro</a>
                         </td>
-                        <td> <a href="/livro/update/${l.id}" class="btn btn-primary">Delete livro</a></td>                
+                        <td> <a href="/livro/delete/${l.id}" class="btn btn-danger">Delete livro</a></td>                
                     </tr>            
                 </c:forEach>        
             </table>

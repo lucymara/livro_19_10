@@ -55,4 +55,26 @@ public class LivroController {
       
     
   }
+  @RequestMapping("/update/{id}")
+  public String formUpdate(Model model,@PathVariable int id){
+    Optional<Livro>livro=livrosRepo.findById(id);
+    if (!livro.isPresent()) 
+      return "redirect:/livro/list";
+     model.addAttribute("livro",livro.get()); 
+    
+
+    return "/livro/update.jsp";
+  }
+  @RequestMapping(value = "/update",method = RequestMethod.POST)
+  public String saveUpdate(@RequestParam("titulo")String titulo,@RequestParam("id")int id){
+    Optional<Livro>livro=livrosRepo.findById(id);
+    if (!livro.isPresent()) 
+      return "redirect:/livro/list";
+    livro.get().setTitulo(titulo);
+    livrosRepo.save(livro.get());
+
+    return "redirect:/livro/list";
+      
+    
+  }
 }
