@@ -1,4 +1,4 @@
-package application.controllers;
+package application.controllers;//pacote responsavel por fazer a intermediaçao entre a camada wil e camada banco//
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import application.repositories.LivroRepository;
 import org.springframework.ui.Model;
 
 @Controller
-@RequestMapping("/livro")
+@RequestMapping("/livro")//mapeamento
 public class LivroController {
     @Autowired
     private LivroRepository livrosRepo;
@@ -47,5 +47,12 @@ public class LivroController {
     
 
     return "/livro/delete.jsp";
+  }
+  @RequestMapping(value = "/delete",method = RequestMethod.POST)
+  public String confirmDelete(@RequestParam("id")int id){
+    livrosRepo.deleteById(id); 
+      return "redirect:/livro/list";
+      
+    
   }
 }
