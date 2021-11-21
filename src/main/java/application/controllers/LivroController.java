@@ -1,10 +1,10 @@
-package application.controllers;//pacote responsavel por fazer a intermediaçao entre a camada wil e camada banco//
-import java.util.Optional;
+package application.controllers;//pacote responsavel por fazer a intermediaçao entre a camada wil e camada banco
+import java.util.Optional; 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired; //import referente a linha 19
+import org.springframework.stereotype.Controller; //import referente a linha 16
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMapping; //impot refente a linha 17 e 21 mapeamento
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -13,15 +13,15 @@ import application.repositories.LivroRepository;
 
 import org.springframework.ui.Model;
 
-@Controller
-@RequestMapping("/livro")//mapeamento
-public class LivroController {
-    @Autowired
+@Controller//fazer o mapeamento e acessar a tabela 
+@RequestMapping("/livro")//mapeamento da pacote livro
+public class LivroController {//criaçao classe publica livro controller
+    @Autowired //anotaçao
     private LivroRepository livrosRepo;
-    @RequestMapping("/list")
-    public String list(Model model) {
-        model.addAttribute("livros", livrosRepo.findAll());
-        return "list.jsp"; 
+    @RequestMapping("/list")//anotaçao mapeamento para o pacote list
+    public String list(Model model) { //metodo public list modelaçao da classe
+        model.addAttribute("livros", livrosRepo.findAll());//buscar no banco de dados livros  
+        return "list.jsp"; //retorna list.jsp
     }
   public String listar(){
     return "livro/list.jsp";
