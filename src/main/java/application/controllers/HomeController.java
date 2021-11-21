@@ -1,13 +1,13 @@
-package application.controllers;
+package application.controllers; //pacote application que esta dentro de controlers caminho
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.stereotype.Controller; //importando
+import org.springframework.web.bind.annotation.RequestMapping; //impotando anotaçao requestmapping
+import org.springframework.web.bind.annotation.RequestMethod; //importando resquestmethod
 
 @Controller
-public class HomeController {
-    @RequestMapping(method=RequestMethod.GET)
-    public String index() {
-        return "home/index.jsp";
+public class HomeController { // classe metodo publico
+    @RequestMapping(method=RequestMethod.GET) //anotaçao que da efeito para proxima linha
+    public String index() { //metodo index
+        return "home/index.jsp"; //retorna pra quem chamar
     }
 }

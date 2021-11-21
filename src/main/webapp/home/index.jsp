@@ -1,12 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Exemplo de View</title>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %> //codificaçao html para rodr no servidor
+
+<!DOCTYPE html> <!utilizando html> 
+<html> <!estrutura> 
+    <head> <!estrutura> 
+        <meta charset="utf-8" /> <!estrutura para nao ter problema de acentuçao >
+        <title>Exemplo de View</title> <!titulo>
         <link href="css/default.css" rel="stylesheet" />
-    </head>
-    <body>
-        <h1>Lista de Livros!!!</h1>
-    </body>
-</html>
+    </head> <!estrutura>
+    <body> <!corpo>
+        <h1>Lista de Livros!!!</h1> <!nome que escolhemos para o site>
+    </body> <!corpo>
+</html> <!estrutura>

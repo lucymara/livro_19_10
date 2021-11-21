@@ -1,17 +1,17 @@
-plugins {
-    id 'org.springframework.boot' version '2.3.0.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-    id 'java'
+plugins { //criando arquivo de independencia
+    id 'org.springframework.boot' version '2.3.0.RELEASE' // dependencias e a versao
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE' // dependencias e versao
+    id 'java' // dependencias
 }
 
-repositories {
-    jcenter()
+repositories { // repositorios que vou utilizar
+    jcenter() //onde vou buscar dados
 }
 
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'mysql:mysql-connector-java'
-    implementation 'javax.servlet:jstl:1.2'
-    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+dependencies { //as dependencia que vou utilizar
+    implementation 'org.springframework.boot:spring-boot-starter-web' //implementaçao serviço web
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //implementaçao gravaçao de dados no banco
+    implementation 'mysql:mysql-connector-java'//implementaçao conector java
+    implementation 'javax.servlet:jstl:1.2' //implementaçao serviidor para rodar
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'// implementaçao servidor 
 }
