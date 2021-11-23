@@ -1,4 +1,4 @@
-body { <!corpo>
-    font-family: sans-serif; <!fonte> 
-    color: darkslateblue; <!cor> 
+body { <%corpo%>
+    font-family: sans-serif; <%fonte%> 
+    color: darkslateblue; <%cor%> 
 }

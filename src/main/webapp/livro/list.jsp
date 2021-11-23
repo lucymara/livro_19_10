@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %> <%codificaçao html para rodar no servidor%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> <%fazer uma busca em java no servidor jsp%> 
 <!DOCTYPE html> <%!utilizando html%> 
 <html>  <%estrutura%>  
     <head>  <%estrutura%>      
@@ -13,22 +13,22 @@
         <main class="container">        
             <h1>livros</h1>        
             <button onclick="location.href='/livro/insert'" type="button" class="btn btn-primary">Novo Livro</button>        
-            <table>            
+            <table>    <%criando uma tabela css%>         
                 <tr>                
-                    <th>ID</th>                
-                    <th>Título</th>            
+                    <th>ID</th>      <%id da tabela%>           
+                    <th>Título</th>  <%titulo da tabela%>           
                 </tr>            
-                <c:forEach var="l" items="${livros}">                
+                <c:forEach var="l" items="${livros}">  <%variavel e atabela que recebemos a base de dados%>               
                     <tr>                    
-                        <td>${l.id}</td>                    
-                        <td>${l.titulo}</td>
+                        <td>${l.id}</td>  <%vai vir do banco de dados numero%>                   
+                        <td>${l.titulo}</td> <%o que temos no banco de dados nome e titulo do livro%> 
                         <td>
-                            <a href="/livro/update/${l.id}" class="btn btn-primary">Atualizar livro</a>
+                            <a href="/livro/update/${l.id}" class="btn btn-primary">Atualizar livro</a> <%link do botao de atualizar livro%> 
                         </td>
-                        <td> <a href="/livro/delete/${l.id}" class="btn btn-danger">Delete livro</a></td>                
+                        <td> <a href="/livro/delete/${l.id}" class="btn btn-danger">Delete livro</a></td>  <%link do botao para deletar livro%>               
                     </tr>            
-                </c:forEach>        
-            </table>
+                </c:forEach> <%fechamento da variavel que recebe base de dados livros%>        
+            </table> <%tabela fim%> 
 
         <h1>Lista de livros Lucymara C.</h1></main>        
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

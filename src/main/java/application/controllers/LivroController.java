@@ -4,31 +4,31 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired; //import referente a linha 19
 import org.springframework.stereotype.Controller; //import referente a linha 16
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping; //impot refente a linha 17 e 21 mapeamento
+import org.springframework.web.bind.annotation.RequestMapping; //import mapeamento
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import application.models.Livro; 
-import application.repositories.LivroRepository;
+import application.repositories.LivroRepository;//import referente a linha 20
 
-import org.springframework.ui.Model;
+import org.springframework.ui.Model;//import referente a linha 22 para utilizar model
 
 @Controller//fazer o mapeamento e acessar a tabela 
 @RequestMapping("/livro")//mapeamento da pacote livro
 public class LivroController {//criaçao classe publica livro controller
     @Autowired //anotaçao
-    private LivroRepository livrosRepo;
+    private LivroRepository livrosRepo; // criando um objeto livrorepo privado
     @RequestMapping("/list")//anotaçao mapeamento para o pacote list
     public String list(Model model) { //metodo public list modelaçao da classe
         model.addAttribute("livros", livrosRepo.findAll());//buscar no banco de dados livros  
         return "list.jsp"; //retorna list.jsp
     }
-  public String listar(){
-    return "livro/list.jsp";
+  public String listar(){ //metodo listar
+    return "livro/list.jsp";//retorna livro list jsp vai buscar tudo na tabela list
   }
-  @RequestMapping("/insert")
-  public String formInsert(){
-    return "insert.jsp";
+  @RequestMapping("/insert")//mapeamento para o pacote insert
+  public String formInsert(){//metodo form insert
+    return "insert.jsp"; //retorna insert jsp vai buscar tudo na tabela insert
   }
   @RequestMapping(value="/insert",method=RequestMethod.POST)
   public String saveInsert(@RequestParam("titulo")String titulo){
