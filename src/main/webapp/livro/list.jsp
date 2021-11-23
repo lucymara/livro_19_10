@@ -22,16 +22,16 @@
                     <tr><%!define linha de uma tabela%>                   
                         <td>${l.id}</td>  <%!vai vir do banco de dados numero%>                   
                         <td>${l.titulo}</td> <%!o que temos no banco de dados nome e titulo do livro%> 
-                        <td><%define celula de uma tabela%>
+                        <td><%!define celula de uma tabela%>
                             <a href="/livro/update/${l.id}" class="btn btn-primary">Atualizar livro</a> <%!link do botao de atualizar livro%> 
-                        </td><!%fechamento da definição da tabela%>
+                        </td><%!fechamento da definição da tabela%>
                         <td> <a href="/livro/delete/${l.id}" class="btn btn-danger">Delete livro</a></td>  <%!link do botao para deletar livro%>               
-                    </tr><!%estrutura%>          
+                    </tr><%!estrutura%>          
                 </c:forEach> <%!fechamento da variavel que recebe base de dados livros%>        
             </table> <%!tabela fim%> 
 
         <h1>Lista de livros Lucymara C.</h1></main><%define o nivel do titulo%>        
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script><!%define atributo para um arquivo externo que não esta em nosso servidor%>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script><%define atributo para um arquivo externo que não esta em nosso servidor%>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script><%!define atributo para um arquivo externo que não esta em nosso servidor%>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script><%!efine atributo para um arquivo externo que não esta em nosso servidor%>
 </body> <%!corpo%>
 </html> <%!estrutura%>
